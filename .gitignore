@@ -1,5 +1,2 @@
 # Operating system files.
 .DS_Store
-
-# Files that are erb'd
-gitconfig
