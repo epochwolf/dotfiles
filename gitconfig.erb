@@ -1,0 +1,16 @@
+<%local_file = File.expand_path('~/.gitconfig-local') %>
+<% if File.exists? local_file %>
+<%=File.read local_file %>
+<% else %>
+[user]
+  name = epochwolf
+  email = epochwolf@gmail.com
+<% end %>
+
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
