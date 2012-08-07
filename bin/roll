@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+ARGV.join ''
+
+class InvalidInput < RuntimeError; end
+
+def roll(str)
+  raise InvalidInput, "Invalid die format" unless str =~ /^(\d+)?d\d+$/
+  rolls, die = str.split('d').map &:to_i 
+  rolls = 1 if rolls == 0
+  
+  dice = []
+  
+  rolls.times { dice << (rand(die)+1) }
+  total = dice.inject {|sum, d| sum + d }
+
+  return dice, total
+end
+
+HELP = <<-EOL
+usage: roll [dice]
+
+dice format: <number of dice>d<die type> 
+
+Multiple dice can be rolled at a time.
+EOL
+
+unless ARGV.length == 0
+  begin
+    ARGV.each do |str|
+      dice, total = roll(str)
+      if dice.count == 1
+        puts "#{str}: #{total}"
+      else
+        puts "#{str}: #{total}  (#{dice.join(' + ')})"
+      end
+    end
+  rescue InvalidInput
+    puts "Invalid format error"
+    puts HELP
+  end
+else  
+  puts HELP
+end
