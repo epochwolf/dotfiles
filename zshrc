@@ -10,6 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="nicoulaj"
 ZSH_THEME="epochwolf"
 
+
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
@@ -43,5 +44,6 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 
-# Customize to your needs...
+# environmental variables
+export CC=/usr/bin/gcc-4.2
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:${HOME}/.bin"
