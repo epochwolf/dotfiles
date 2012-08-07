@@ -1,0 +1,13 @@
+#!/bin/bash
+git filter-branch --env-filter <<EOL
+if [ "$GIT_COMMITTER_NAME" = "$1" ];
+then
+export GIT_COMMITTER_NAME="$2";
+export GIT_COMMITTER_EMAIL="$3";
+fi
+if [ "$GIT_AUTHOR_NAME" = "$1" ];
+then
+export GIT_AUTHOR_NAME="$2";
+export GIT_AUTHOR_EMAIL="$3";
+fi
+EOL
