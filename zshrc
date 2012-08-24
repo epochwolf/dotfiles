@@ -10,12 +10,22 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="nicoulaj"
 ZSH_THEME="epochwolf"
 
+# environmental variables
+export CC=/usr/bin/gcc-4.2
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:${HOME}/.bin:${HOME}/.rvm/bin"
 
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
 alias gk="gitk 2> /dev/null"
+alias gcom="git checkout master"
+alias gcow="git checkout work"
+alias gcot="git checkout test"
+alias gcos="git checkout staging"
+alias grbm="git rebase master"
+alias grbw="git rebase work"
+alias grb="git rebase"
 alias rat="rake test"
 alias ratu="rake test:units"
 alias rati="rake test:integration"
@@ -38,12 +48,9 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 terminalapp osx)
+plugins=(git rvm rails3 terminalapp osx)
 
 source $ZSH/oh-my-zsh.sh
 
 [[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 
-# environmental variables
-export CC=/usr/bin/gcc-4.2
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:${HOME}/.bin"
