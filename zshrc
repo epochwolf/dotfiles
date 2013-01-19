@@ -11,8 +11,9 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="epochwolf"
 
 # environmental variables
-export CC=/usr/bin/gcc-4.2
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:${HOME}/.bin:${HOME}/.rvm/bin"
+#export CC=/usr/bin/gcc-4.2
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/.bin:${HOME}/.rvm/bin"
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
@@ -29,6 +30,8 @@ alias grb="git rebase"
 alias rat="rake test"
 alias ratu="rake test:units"
 alias rati="rake test:integration"
+alias ratf="rake test:functionals"
+alias be="bundle exec"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
