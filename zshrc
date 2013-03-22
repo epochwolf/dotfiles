@@ -32,6 +32,7 @@ alias ratu="rake test:units"
 alias rati="rake test:integration"
 alias ratf="rake test:functionals"
 alias be="bundle exec"
+# alias sshk="ssh root:23817d888fnalidu@kazan.epochwolf.com"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

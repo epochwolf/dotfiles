@@ -7,7 +7,7 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh]
+  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh ssh]
   #files << "oh-my-zsh/custom/plugins/epochwolf"
   files << "oh-my-zsh/custom/epochwolf.zsh-theme"
   files.each do |file|

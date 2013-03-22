@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir -p ~/Desktop/kazan
+sshfs kazan:/srv/ ~/Desktop/kazan
+open ~/Desktop/kazan 

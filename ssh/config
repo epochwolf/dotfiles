@@ -1,0 +1,22 @@
+Host *
+  ServerAliveInterval 15
+  ServerAliveCountMax 3
+#  ForwardAgent no
+#  ForwardX11 no
+
+Host vm
+  Hostname 172.16.70.128
+  User root
+
+Host kazan
+  Hostname kazan.epochwolf.com
+  Port 443
+  DynamicForward 8080
+
+Host github.com
+  User git
+  Port 22
+  Hostname github.com
+  IdentityFile ~/.ssh/id_dsa
+  TCPKeepAlive yes
+  IdentitiesOnly yes
