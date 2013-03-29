@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir -p ~/Desktop/kazan
-sshfs kazan:/srv/ ~/Desktop/kazan
-open ~/Desktop/kazan 
+mkdir -p /tmp/kazan
+sshfs kazan:/srv/ /tmp/kazan
+open /tmp/kazan 
