@@ -1,0 +1,2 @@
+#!/bin/bash
+open /Library/PreferencePanes/Microsoft\ Keyboard.prefPane/Contents/Resources/MicrosoftKeyboardHelper.app > /dev/null 2>&1
