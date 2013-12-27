@@ -27,11 +27,13 @@ alias gcos="git checkout staging"
 alias grbm="git rebase master"
 alias grbw="git rebase work"
 alias grb="git rebase"
+alias rake="noglob rake"
 alias rat="rake test"
 alias ratu="rake test:units"
 alias rati="rake test:integration"
 alias ratf="rake test:functionals"
 alias be="bundle exec"
+alias berc="bundle exec rails console"
 
 cdgems(){
   if [[ -n "$GEM_HOME" ]] ; then 
@@ -61,9 +63,11 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm rails3 terminalapp osx)
+#plugins=(git rvm rails3 terminalapp osx)
+plugins=(git rvm rails osx)
 
 source $ZSH/oh-my-zsh.sh
 
+[[ -s "${HOME}/.zshrc-local" ]] && source "${HOME}/.zshrc-local"
 [[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm"
 
