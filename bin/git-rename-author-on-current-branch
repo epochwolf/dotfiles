@@ -1,4 +1,5 @@
 #!/bin/bash
+# usage: ./git-rename-author-on-current-branch old_name new_name new_email
 git filter-branch --env-filter <<EOL
 if [ "$GIT_COMMITTER_NAME" = "$1" ];
 then
