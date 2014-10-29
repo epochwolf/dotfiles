@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "You should know better."
+
+#git commit -am "DEAL WITH IT" 
+#git push -f origin master
+#cap deploy
