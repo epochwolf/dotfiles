@@ -12,7 +12,7 @@ ZSH_THEME="epochwolf"
 
 # environmental variables
 #export CC=/usr/bin/gcc-4.2
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/.bin:${HOME}/.rvm/bin"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin:${HOME}/.bin:${HOME}/.rvm/bin"
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Example aliases
