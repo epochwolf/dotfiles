@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="fishy"
 #ZSH_THEME="nicoulaj"
-ZSH_THEME="epochwolf"
+ZSH_THEME="epochwolf2"
 
 # environmental variables
 #export CC=/usr/bin/gcc-4.2

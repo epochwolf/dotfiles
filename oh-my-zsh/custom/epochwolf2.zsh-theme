@@ -1,5 +1,6 @@
 # Comment
 
+PROMPT_PATH_MAX_LENGTH=30
 PROMPT_DEFAULT_END=❯
 
 PROMPT_SUCCESS_COLOR=$FG[071]
@@ -7,7 +8,7 @@ PROMPT_FAILURE_COLOR=$FG[124]
 PROMPT_VCS_INFO_COLOR=$FG[242]
 
 
-PROMPT='%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})%d$PROMPT_DEFAULT_END %{$reset_color%}'
+PROMPT='%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})%{$FX[bold]%}%30<..<%~$PROMPT_DEFAULT_END %{$FX[no-bold]%}%{$reset_color%}'
 
 RPROMPT='%{$PROMPT_VCS_INFO_COLOR%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
 

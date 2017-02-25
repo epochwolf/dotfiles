@@ -10,6 +10,7 @@ task :install do
   files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh ssh]
   #files << "oh-my-zsh/custom/plugins/epochwolf"
   files << "oh-my-zsh/custom/epochwolf.zsh-theme"
+  files << "oh-my-zsh/custom/epochwolf2.zsh-theme"
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
