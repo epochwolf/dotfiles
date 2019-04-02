@@ -7,8 +7,14 @@ PROMPT_SUCCESS_COLOR=$FG[071]
 PROMPT_FAILURE_COLOR=$FG[124]
 PROMPT_VCS_INFO_COLOR=$FG[242]
 
+if [[ -z "$SSH_CLIENT" ]]; then
+  PROMPT_HOST=""
+else
+  PROMPT_HOST="%{$fg[white]%}%m "
+fi
 
-PROMPT='%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})%{$FX[bold]%}%30<..<%~$PROMPT_DEFAULT_END %{$FX[no-bold]%}%{$reset_color%}'
+
+PROMPT='$PROMPT_HOST%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})%{$FX[bold]%}%30<..<%~$PROMPT_DEFAULT_END %{$FX[no-bold]%}%{$reset_color%}'
 
 RPROMPT='%{$PROMPT_VCS_INFO_COLOR%}$(git_prompt_info)%{$reset_color%} $(git_prompt_status)%{$reset_color%}'
 
